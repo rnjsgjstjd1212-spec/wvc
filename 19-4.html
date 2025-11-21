@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>switch문 사칙연산 예제</title>
+</head>
+<body>
+
+<h2>switch문을 이용한 사칙연산 프로그램</h2>
+<hr>
+
+<script>
+    
+    var num1 = parseFloat(prompt("첫 번째 숫자를 입력하세요:", "0"));
+    var num2 = parseFloat(prompt("두 번째 숫자를 입력하세요:", "0"));
+
+    
+    var op = prompt("연산자를 입력하세요 (+, -, *, / 중 하나):", "+");
+
+    var result; 
+    switch(op) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            
+            if (num2 === 0) {
+                document.write("0으로 나눌 수 없습니다.<br>");
+                result = undefined; 
+            } else {
+                result = num1 / num2;
+            }
+            break;
+        default:
+            document.write("잘못된 연산자를 입력하였습니다.<br>");
+            result = undefined;
+    }
+
+    
+    if (result !== undefined) {
+        document.write(num1 + " " + op + " " + num2 + " = " + result + "<br>");
+    }
+</script>
+
+</body>
+</html>
