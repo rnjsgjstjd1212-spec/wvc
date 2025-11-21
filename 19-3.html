@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>조건문 실습</title>
+</head>
+<body>
+
+<h2>if문을 이용한 조건문 실습</h2>
+<hr>
+
+
+<script>
+    document.write("<h3>① 5의 배수 판별 프로그램</h3>");
+
+    var num = parseInt(prompt("수를 입력하세요:", "0"));
+
+    if (num % 5 == 0) {
+        document.write(num + "은(는) 5의 배수입니다.<br>");
+    } else {
+        document.write(num + "은(는) 5의 배수가 아닙니다.<br>");
+    }
+</script>
+
+<hr>
+
+
+<script>
+    document.write("<h3>② 홀수/짝수 판별 프로그램</h3>");
+
+    var n = parseInt(prompt("수를 입력하세요:", "0"));
+
+    if (n % 2 == 0) {
+        document.write(n + "은(는) 짝수입니다.<br>");
+    } else {
+        document.write(n + "은(는) 홀수입니다.<br>");
+    }
+</script>
+
+<hr>
+
+
+<script>
+    document.write("<h3>③ 세 수 중 가장 큰 수 출력</h3>");
+
+    var a = parseFloat(prompt("첫 번째 수를 입력하세요:", "0"));
+    var b = parseFloat(prompt("두 번째 수를 입력하세요:", "0"));
+    var c = parseFloat(prompt("세 번째 수를 입력하세요:", "0"));
+
+    var max; 
+
+    if (a >= b && a >= c) {
+        max = a;
+    } else if (b >= a && b >= c) {
+        max = b;
+    } else {
+        max = c;
+    }
+
+    document.write("입력한 세 수는 " + a + ", " + b + ", " + c + "이며<br>");
+    document.write("가장 큰 수는 " + max + " 입니다.<br>");
+</script>
+
+</body>
+</html>
